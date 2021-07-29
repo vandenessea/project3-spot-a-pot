@@ -6,6 +6,11 @@ export class MapContainer extends Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
+
+      mapCenter: {
+          lat: 37.5385087,
+          lng: -77.43428,
+      }
     };
    
     onMarkerClick = (props, marker, e) =>
@@ -27,7 +32,10 @@ export class MapContainer extends Component {
     render() {
       return (
         <Map google={this.props.google}
-            onClick={this.onMapClicked}>
+            initialCenter={{
+                lat: this.state.mapCenter.lat,
+                lng: this.state.mapCenter.lng
+            }}>
           <Marker onClick={this.onMarkerClick}
                   name={'Current location'} />
    

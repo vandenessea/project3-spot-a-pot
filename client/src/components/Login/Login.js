@@ -30,7 +30,7 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="container my-1" style={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)" }} >
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
@@ -45,7 +45,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2" >
           <label htmlFor="pwd">Password:</label>
           <input
             placeholder="******"

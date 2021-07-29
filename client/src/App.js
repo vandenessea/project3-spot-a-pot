@@ -49,11 +49,13 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
-        <h1 style={{textAlign: 'center' , fontSize: '50px' }}>Spot-A-pot</h1>
+        <h1 style={{textAlign: 'center' , fontSize: '50px' }}>Spot-A-Pot<Login/></h1>
           <GoogleMap />
           </div>
           <div>
-          <Login />
+          
+          </div>
+          <div>
           <SignUp />
          
         </div>
