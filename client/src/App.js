@@ -8,15 +8,20 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home';
-import Maps from './components/Maps';
+
+import GoogleMap from './components/GoogleMap/GoogleMaps';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/Signup';
+//import Ratings from './components/Ratings/Ratings';
+//import Home from './pages/Home';
+//import Maps from './components/Maps';
 //import Detail from './pages/Detail';
 //import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Nav from './components/Nav';
+//import Login from './pages/Login';
+//import Signup from './pages/Signup';
+//import Nav from './components/Nav';
 //import { StoreProvider } from './utils/GlobalState';
-import LandingPage from './componets/LandingPAge';
+//import LandingPage from './componets/LandingPAge';
 
 
 
@@ -43,20 +48,14 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          
-            <Nav />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/Maps" component={Maps} />
-              <Route exact path="/LandingPage" component={LandingPage} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              
-             
-              
-            </Switch>
-          
+        <div className="App">
+        <h1 style={{textAlign: 'center' , fontSize: '50px' }}>Spot-A-pot</h1>
+          <GoogleMap />
+          </div>
+          <div>
+          <Login />
+          <SignUp />
+         
         </div>
       </Router>
     </ApolloProvider>
