@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { useState } from 'react'
+import { Rating } from 'react-simple-star-rating'
 
-import StarRating from './StarRating/star-rating';
+export default function MyComponent() {
+  const [rating, setRating] = useState(0) // initial rating value
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <StarRating/>
-      </View>
-    );
+  // Catch Rating value
+  const handleRating = (rate) => {
+    setRating(rate)
+    // Some logic
   }
+
+  return (
+    <div className='App'>
+      <Rating onClick={handleRating} ratingValue={rating} /* Rating Props */ />
+    </div>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
-});
-
