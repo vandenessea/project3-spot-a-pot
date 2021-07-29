@@ -17,7 +17,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 //import { StoreProvider } from './utils/GlobalState';
 import LandingPage from './componets/LandingPAge';
-import OrderHistory from './pages/OrderHistory';
+
 
 
 const httpLink = createHttpLink({
@@ -48,7 +48,7 @@ function App() {
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/Map" component={Maps} />
+              <Route exact path="/Maps" component={Maps} />
               <Route exact path="/LandingPage" component={LandingPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />

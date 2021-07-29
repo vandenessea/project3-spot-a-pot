@@ -1,9 +1,9 @@
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Maps, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
  
-export class MapContainer extends Component {
+export class MapContainer extends component {
   render() {
     return (
-      <Map google={this.props.google} zoom={14}>
+      <Maps google={this.props.google} zoom={14}>
  
         <Marker onClick={this.onMarkerClick}
                 name={'Current location'} />
@@ -13,7 +13,7 @@ export class MapContainer extends Component {
               <h1>{this.state.selectedPlace.name}</h1>
             </div>
         </InfoWindow>
-      </Map>
+      </Maps>
     );
   }
 }
