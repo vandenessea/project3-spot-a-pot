@@ -14,6 +14,7 @@ import SignUp from "./components/SignUp/Signup";
 import Ratings from "./components/Ratings/Ratings";
 import Marker from "./components/Marker/Marker";
 import Nav from "./components/Nav/Nav";
+import Restrooms from "./components/Restrooms/Restrooms";
 //import Home from './components/Home/Home'
 //import Home from './pages/Home';
 //import Maps from './components/Maps';
@@ -51,6 +52,7 @@ function App() {
         <Switch>
           
           <Route exact path="/" component={GoogleMap} />
+          <Route exact path="/Restrooms" component={Restrooms} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Marker" component={Marker} />
           <Route exact path="/Nav" component={Nav} />
