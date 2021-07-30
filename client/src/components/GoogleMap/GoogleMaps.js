@@ -12,6 +12,8 @@ export class MapContainer extends Component {
           lng: -77.43428,
       }
     };
+
+    
    
     onMarkerClick = (props, marker, e) =>
       this.setState({
