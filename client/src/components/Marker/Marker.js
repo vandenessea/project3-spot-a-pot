@@ -1,6 +1,7 @@
 import React from 'react';
 import {Marker} from 'react-google-maps';
 
+
 const CustomMarker = (props) => {
     const {id} = props;
 
